@@ -262,14 +262,18 @@ header {
   justify-content: flex-end;
 }
 
-.hero-img {
+.hero-container {
   border: 1px solid red;
-  height: 100%;
   width: 100%;
-  background-image: url(../assets/images/pixivore-clay.jpg);
-  background-size: auto;
-  background-position: center;
+  height: 100%;
   border-radius: 27px 27px 27px 170px;
+  overflow: hidden;
+}
+
+.hero-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Section Divider */
@@ -423,7 +427,6 @@ header {
 
 /* Course Highlights */
 #course-highlights {
-  height: 80vh;
   border: 1px solid blue;
   padding: 80px;
 }
@@ -432,11 +435,31 @@ header {
   max-height: 600px;
 }
 
-.carousel-item img {
+#carouselExampleIndicators {
+  height: 100%;
+  border-radius: 27px;
+  overflow: hidden;
+}
+
+#carouselExampleIndicators > div {
+  height: 100%;
+}
+
+#course-highlights > h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.carousel-overlay {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  background-color: black;
+  opacity: 0.5;
 }
 
 /* CTA */
@@ -535,6 +558,10 @@ header {
 
 #IABE-certified > img {
   width: 468px;
+}
+
+#course-certificate > h2 {
+  font-weight: bold;
 }
 
 /* Footer */
