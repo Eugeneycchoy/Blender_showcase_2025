@@ -216,8 +216,8 @@ button:focus {
 
 header {
   display: flex;
-  height: 100vh;
   padding: 80px;
+  min-height: 100vh;
 }
 
 .header-left,
@@ -296,7 +296,7 @@ header {
   border: 1px red solid;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .course-overview-left h2 {
@@ -366,6 +366,7 @@ header {
   color: var(--accent-color);
   margin-bottom: 1rem;
   font-weight: bold;
+  font-size: 22px;
 }
 
 .course-overview-card ul {
@@ -376,6 +377,7 @@ header {
 
 .course-overview-card ul li {
   line-height: 1.3;
+  font-size: 18px;
 }
 
 /* Course Feature Section */
@@ -429,37 +431,80 @@ header {
 #course-highlights {
   border: 1px solid blue;
   padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.carousel-inner {
-  max-height: 600px;
+#course-highlights > h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 #carouselExampleIndicators {
-  height: 100%;
+  height: 60vh;
   border-radius: 27px;
   overflow: hidden;
+  max-width: 100rem;
+  width: 100%;
+}
+
+#carouselExampleIndicators > div > div.carousel-item > img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 25% 15%;
+}
+
+#carouselExampleIndicators > div > div.carousel-item {
+  height: 100%;
 }
 
 #carouselExampleIndicators > div {
   height: 100%;
 }
 
-#course-highlights > h2 {
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
 .carousel-overlay {
   width: 100%;
   height: 100%;
-  z-index: 9999;
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
   border: 1px solid black;
   background-color: black;
   opacity: 0.5;
+  padding: 5rem;
+  border: 10px solid blue;
+}
+
+.course-highlights-text-content {
+  border: 1px solid red;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-highlights-text-content h2,
+.course-highlights-text-content p {
+  color: white;
+  opacity: 1;
+}
+
+.course-highlights-text-content hr {
+  border: 1px solid white;
+}
+
+.course-highlights-text-content img {
+  width: 10rem;
+  justify-self: flex-end;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 5rem;
 }
 
 /* CTA */
@@ -571,4 +616,176 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Tablet Screens */
+@media (width < 1440px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-right {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  /* Header - Blender Logo */
+  body > main > header > div.header-left > img {
+    position: static;
+  }
+
+  .header-left {
+    text-align: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Text below h1 */
+  body > main > header > div.header-left > h3 {
+    width: 34rem;
+  }
+
+  .course-overview-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .course-overview-left,
+  .course-overview-right {
+    width: 100%;
+  }
+
+  .course-overview-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  body
+    > main
+    > div.course-overview-section
+    > div.course-overview-left
+    > button {
+    align-self: center;
+  }
+
+  #cta {
+    height: 120vh;
+  }
+
+  #cta > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-left,
+  .cta-right {
+    width: 100%;
+  }
+
+  .cta-right {
+    margin-left: 0;
+    gap: 1.875rem;
+  }
+
+  #cta > div > div.cta-right > div,
+  #cta > div > div.cta-right > button {
+    margin: 0 auto;
+  }
+
+  #cta > div > div.cta-right > p {
+    width: 60%;
+    align-self: center;
+  }
+}
+
+/* Mobile Screens */
+@media (width <= 768px) {
+  header,
+  .course-overview-section {
+    padding: 23px;
+    padding-block: 5rem;
+    gap: 0rem;
+  }
+
+  .course-overview-left {
+    padding: 0;
+  }
+
+  .course-overview-right {
+    padding: 3.5rem;
+    min-width: none;
+  }
+
+  .course-overview-card-top-row,
+  .course-overview-card-bottom-row {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .course-overview-card {
+    height: auto;
+    width: auto;
+  }
+
+  /* First tilted card  */
+  body
+    > main
+    > div.course-overview-section
+    > div.course-overview-right
+    > div.course-overview-card-top-row
+    > div:nth-child(1) {
+    transform: rotate(0deg);
+  }
+
+  body > main > div.course-feature-section > h2 {
+    font-size: 1.875rem;
+  }
+
+  .features {
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    gap: 5.625rem;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature img {
+    width: 7.625rem;
+  }
+
+  body > main > div.course-feature-section > div > div > h2 {
+    margin-top: 0;
+  }
+
+  #cta > div > div.cta-right > h2 {
+    width: 21.75rem;
+    align-self: center;
+  }
+
+  #IABE-certified > h2,
+  #course-certificate > div > h2 {
+    font-size: 22px !important;
+  }
+
+  #IABE-certified > h2 {
+    font-weight: bold;
+    min-width: 322px;
+  }
+
+  #IABE-certified > img {
+    width: 12.8rem;
+  }
 }
