@@ -15,6 +15,9 @@
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="./css/learning_res.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <nav>
@@ -23,7 +26,7 @@
 
     <main>
       <header>
-        <div class="header-left">
+        <div data-aos="fade-right" class="header-left">
           <h1>20小時<br />從零開始<br />掌握3D世界!</h1>
           <h3>
             專為初學者而設的Blender線上課程，從基礎操作到進階應用，幫助你一步一步成為3D創作高手！
@@ -35,7 +38,7 @@
           <img src="./assets/images/Blender logo.svg" alt="blender-logo" />
         </div>
 
-        <div class="header-right">
+        <div data-aos="fade-left" class="header-right">
           <div class="hero-container">
             <video
               src="./assets/videos/6236756-uhd_3840_2160_25fps.mp4"
@@ -50,7 +53,7 @@
 
       <div class="divider"></div>
 
-      <div class="course-overview-section">
+      <div data-aos="fade-up" class="course-overview-section">
         <div class="course-overview-left">
           <h2>創作者的最佳起點，<br />帶你全面入門<br />Blender！</h2>
           <h3>無需任何建模經驗，20小時的專業內容將帶你探索3D的無限可能</h3>
@@ -103,23 +106,23 @@
       </div>
 
       <div class="course-feature-section">
-        <h2>
+        <h2 data-aos="fade-up">
           不論你是對3D有興趣，還是想打造專業作品，<br />這門課程都能幫助你輕鬆入門
         </h2>
 
-        <div class="features">
-          <div class="feature">
+        <div data-aos="fade-up" class="features">
+          <div data-aos="fade-up" class="feature">
             <img src="./assets/images/icons/module 1.png" alt="puzzle-piece" />
             <h2><span id="feature-stat">6</span>大學習模塊</h2>
             <div class="orange-line"></div>
           </div>
 
-          <div class="feature">
+          <div data-aos="fade-up" class="feature">
             <img src="./assets/images/icons/unit 1.png" alt="puzzle-piece" />
             <h2><span id="feature-stat">76</span>個單元</h2>
             <div class="orange-line"></div>
           </div>
-          <div class="feature">
+          <div data-aos="fade-up" class="feature">
             <img src="./assets/images/icons/globe 1.png" alt="puzzle-piece" />
             <h2><span id="feature-stat">3</span>種語言</h2>
             <div class="orange-line"></div>
@@ -128,13 +131,13 @@
       </div>
 
       <section id="course-highlights">
-        <h2>課程亮點</h2>
+        <h2 data-aos="fade-up">課程亮點</h2>
 
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
           data-ride="carousel"
-          data-interval="false"
+          data-aos="fade-up"
         >
           <ol class="carousel-indicators">
             <li
@@ -210,7 +213,7 @@
         </div>
       </section>
 
-      <section id="cta">
+      <section data-aos="fade-up" id="cta">
         <div class="cta-content">
           <div class="cta-left">
             <div class="cta-img-container"><h2>還在猶豫？</h2></div>
@@ -253,7 +256,7 @@
         </div>
       </section>
 
-      <section id="course-certificate">
+      <section data-aos="fade-up" id="course-certificate">
         <h2>課程證書</h2>
         <div>
           <div id="IABE-certified">
@@ -272,6 +275,7 @@
       </footer>
     </main>
 
+    <!-- Bootstrap -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -287,5 +291,11 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
