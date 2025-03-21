@@ -378,6 +378,10 @@ header {
 .course-feature-section {
 }
 
+.feature-stat {
+  font-size: var(--desktop-h1-font-size);
+}
+
 .course-feature-section h2 {
   text-align: center;
   font-size: var(--desktop-h2-font-size);

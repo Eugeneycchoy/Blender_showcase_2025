@@ -27,13 +27,16 @@
     <main>
       <header>
         <div data-aos="fade-right" class="header-left">
-          <h1>20小時<br />從零開始<br />掌握3D世界!</h1>
+          <h1>
+            <span id="header-num-count"></span
+            >小時<br />從零開始<br />掌握3D世界!
+          </h1>
           <h3>
             專為初學者而設的Blender線上課程，從基礎操作到進階應用，幫助你一步一步成為3D創作高手！
           </h3>
           <div class="header-btns">
             <button>立即報名</button>
-            <button>了解更多</button>
+            <button class="learn-more-btn">了解更多</button>
           </div>
           <img src="./assets/images/Blender logo.svg" alt="blender-logo" />
         </div>
@@ -53,7 +56,7 @@
 
       <div class="divider"></div>
 
-      <div data-aos="fade-up" class="course-overview-section">
+      <div class="course-overview-section">
         <div class="course-overview-left">
           <h2>創作者的最佳起點，<br />帶你全面入門<br />Blender！</h2>
           <h3>無需任何建模經驗，20小時的專業內容將帶你探索3D的無限可能</h3>
@@ -61,7 +64,7 @@
         </div>
         <div class="course-overview-right">
           <div class="course-overview-card-top-row">
-            <div class="course-overview-card">
+            <div data-aos="fade-up" class="course-overview-card">
               <h4>適合零基礎學員，內容循序漸進，降低學習門檻</h4>
               <ul>
                 <li>完全針對初學者設計，無需任何3D建模經驗</li>
@@ -70,7 +73,7 @@
                 </li>
               </ul>
             </div>
-            <div class="course-overview-card">
+            <div data-aos="fade-up" class="course-overview-card">
               <h4>分階段學習，提供清晰的進度規劃</h4>
               <ul>
                 <li>
@@ -81,7 +84,7 @@
             </div>
           </div>
           <div class="course-overview-card-bottom-row">
-            <div class="course-overview-card">
+            <div data-aos="fade-up" class="course-overview-card">
               <h4>強調實用性與成果導向</h4>
               <ul>
                 <li>
@@ -93,7 +96,7 @@
                 </li>
               </ul>
             </div>
-            <div class="course-overview-card">
+            <div data-aos="fade-up" class="course-overview-card">
               <h4>多語言支持，學習更靈活、更國際化？</h4>
               <ul>
                 <li>
@@ -113,18 +116,18 @@
         <div data-aos="fade-up" class="features">
           <div data-aos="fade-up" class="feature">
             <img src="./assets/images/icons/module 1.png" alt="puzzle-piece" />
-            <h2><span id="feature-stat">6</span>大學習模塊</h2>
+            <h2><span class="feature-stat">6</span>大學習模塊</h2>
             <div class="orange-line"></div>
           </div>
 
           <div data-aos="fade-up" class="feature">
             <img src="./assets/images/icons/unit 1.png" alt="puzzle-piece" />
-            <h2><span id="feature-stat">76</span>個單元</h2>
+            <h2><span class="feature-stat">76</span>個單元</h2>
             <div class="orange-line"></div>
           </div>
           <div data-aos="fade-up" class="feature">
             <img src="./assets/images/icons/globe 1.png" alt="puzzle-piece" />
-            <h2><span id="feature-stat">3</span>種語言</h2>
+            <h2><span class="feature-stat">3</span>種語言</h2>
             <div class="orange-line"></div>
           </div>
         </div>
@@ -171,9 +174,9 @@
               />
               <div class="carousel-overlay"></div>
               <div class="course-highlights-text-content">
-                <h2>全面掌握Blender核心技術</h2>
+                <h2>實戰導向的學習經驗</h2>
                 <hr />
-                <p>從建模、材質、燈光到動畫與渲染，涵蓋3D製作的完整流程</p>
+                <p>通過多階段實作練習，學員能快速累積作品，提升學習成就感</p>
                 <img src="./assets/images/Blender logo.svg" alt="" />
               </div>
             </div>
@@ -185,9 +188,9 @@
               />
               <div class="carousel-overlay"></div>
               <div class="course-highlights-text-content">
-                <h2>全面掌握Blender核心技術</h2>
+                <h2>創作高品質3D作品</h2>
                 <hr />
-                <p>從建模、材質、燈光到動畫與渲染，涵蓋3D製作的完整流程</p>
+                <p>學會運用Blender的各種工具，打造專業級靜態與動態作品</p>
                 <img src="./assets/images/Blender logo.svg" alt="" />
               </div>
             </div>
@@ -297,5 +300,8 @@
     <script>
       AOS.init();
     </script>
+
+    <!-- Custom JS -->
+    <script src="./js/learning_res.js" defer></script>
   </body>
 </html>
