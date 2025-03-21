@@ -352,7 +352,7 @@ header {
 .course-overview-card-top-row > div:nth-child(1) {
   background-color: var(--contrast-color);
   color: white;
-  transform: rotate(-5deg);
+  transform: rotate(-5deg) !important;
 }
 
 .course-overview-card h4 {
