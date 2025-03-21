@@ -41,25 +41,26 @@ function countUp(target, targetNum, intervalinMs) {
 
 function executeOnce() {
   // Check if the current page is index.html
-  if (
-    window.location.pathname === "/" ||
-    window.location.pathname === "/index.html"
-  ) {
+  const path = window.location.pathname;
+  if (path.endsWith("/") || path.endsWith("/index.html")) {
     // Get the current scroll position
     let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
     // Define the position where you want the function to execute
-    let targetPosition = 1500; // Change this value to your desired position
+    let targetPosition = 1200; // Change this value to your desired position
 
     // Check if the current scroll position has reached the target position
     if (scrollPosition >= targetPosition) {
-      // begin the "numbers going up" animation
+      // Begin the "numbers going up" animation
       countAllNums();
       // Remove the scroll event listener
       window.removeEventListener("scroll", executeOnce);
     }
   }
 }
+
+// Add the scroll event listener
+window.addEventListener("scroll", executeOnce);
 
 function countAllNums() {
   // Ensure featureStatNums is defined and is an iterable
