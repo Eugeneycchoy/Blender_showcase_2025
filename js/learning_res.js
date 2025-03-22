@@ -3,6 +3,8 @@ let learnMoreBtn = document.querySelector(".learn-more-btn");
 let headerNum = document.querySelector("#header-num-count");
 let featureStatNums = document.querySelectorAll(".feature-stat");
 
+let tiltedCard = document.querySelector(".tilted-card");
+
 // keep track of previous scroll position
 let prevScrollPos = window.pageYOffset;
 
@@ -47,14 +49,18 @@ function executeOnce() {
     let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
     // Define the position where you want the function to execute
-    let targetPosition = 1200; // Change this value to your desired position
+    let overviewSectionPos = 850;
+    let featureSectionPos = 1200; // Change this value to your desired position
 
     // Check if the current scroll position has reached the target position
-    if (scrollPosition >= targetPosition) {
+    if (scrollPosition >= featureSectionPos) {
       // Begin the "numbers going up" animation
       countAllNums();
       // Remove the scroll event listener
       window.removeEventListener("scroll", executeOnce);
+    } else if (scrollPosition >= overviewSectionPos) {
+      // Do the shake animation
+      tiltedCard.classList.add("shake-animation");
     }
   }
 }
