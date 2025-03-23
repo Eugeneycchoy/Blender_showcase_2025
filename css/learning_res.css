@@ -356,7 +356,6 @@ header {
   border-radius: 27px;
   background-color: white;
   padding: 3.5rem;
-  filter: drop-shadow(0px 17px 25px #606060);
 }
 
 .course-overview-card ul {
@@ -367,6 +366,7 @@ header {
   background-color: var(--contrast-color);
   color: white;
   transform: rotate(-5deg);
+  z-index: 9999;
 }
 
 .shake-animation {
@@ -418,9 +418,6 @@ header {
 }
 
 /* Course Feature Section */
-.course-feature-section {
-}
-
 .feature-stat {
   font-size: var(--desktop-h1-font-size);
 }
