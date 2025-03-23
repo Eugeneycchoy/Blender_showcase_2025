@@ -231,6 +231,10 @@ header {
   min-height: 80vh;
 }
 
+#twenty-hour {
+  color: var(--accent-color);
+}
+
 .header-left,
 .header-right {
   width: 50%;
