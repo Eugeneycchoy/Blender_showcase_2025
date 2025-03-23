@@ -163,6 +163,8 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
 }
 
 h1 {
@@ -240,6 +242,7 @@ header {
   justify-content: center;
   gap: 30px;
   position: relative;
+  padding-bottom: 8rem;
 }
 
 .header-left h3 {
@@ -353,6 +356,7 @@ header {
   border-radius: 27px;
   background-color: white;
   padding: 3.5rem;
+  filter: drop-shadow(0px 17px 25px #606060);
 }
 
 .course-overview-card ul {
@@ -653,7 +657,7 @@ footer {
 /* Tablet Screens */
 @media (width < 1440px) {
   header {
-    padding-block: 2rem;
+    padding-block: 5rem;
   }
   .header-left {
     position: absolute;
