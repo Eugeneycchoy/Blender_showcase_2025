@@ -147,6 +147,16 @@ table {
   box-sizing: border-box;
 }
 
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(../assets/images/bg.png);
@@ -352,7 +362,36 @@ header {
 .course-overview-card-top-row > div:nth-child(1) {
   background-color: var(--contrast-color);
   color: white;
-  transform: rotate(-5deg) !important;
+  transform: rotate(-5deg);
+}
+
+.shake-animation {
+  animation: shake 0.8s ease-in-out !important;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(-5deg);
+  }
+
+  40% {
+    transform: rotate(5deg);
+  }
+
+  60% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
 }
 
 .course-overview-card h4 {
@@ -619,10 +658,9 @@ footer {
   .header-left {
     position: absolute;
     color: white;
-    padding: 5rem;
+    padding: 3.3rem;
     z-index: 9999;
     top: 22%;
-    min-width: 566px;
   }
 
   .header-right {
@@ -644,11 +682,6 @@ footer {
 
   body > main > header > div.header-right > div {
     border-radius: 27px;
-  }
-
-  /* Text below h1 */
-  body > main > header > div.header-left > h3 {
-    width: 34rem;
   }
 
   body > main > header > div.header-left > div > button:nth-child(2) {
@@ -760,6 +793,7 @@ footer {
 
   .header-left {
     top: 15%;
+    width: 100%;
   }
 
   body > main > header > div.header-right > div {
@@ -785,16 +819,6 @@ footer {
   .course-overview-card {
     height: auto;
     width: auto;
-  }
-
-  /* First tilted card  */
-  body
-    > main
-    > div.course-overview-section
-    > div.course-overview-right
-    > div.course-overview-card-top-row
-    > div:nth-child(1) {
-    transform: rotate(0deg);
   }
 
   body > main > div.course-feature-section > h2 {
