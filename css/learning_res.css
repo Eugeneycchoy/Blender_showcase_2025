@@ -287,6 +287,16 @@ header {
   object-fit: cover;
 }
 
+body
+  > main
+  > header
+  > div.header-left.aos-init.aos-animate
+  > div
+  > button:nth-child(1)
+  > a {
+  color: white;
+}
+
 /* Section Divider */
 .divider {
   width: 100%;
@@ -772,6 +782,10 @@ footer {
     flex-direction: column-reverse;
     gap: 2rem;
     align-items: flex-start;
+  }
+
+  body > main > header > div.header-left.aos-init.aos-animate > img {
+    bottom: -5rem;
   }
 }
 
