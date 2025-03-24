@@ -253,6 +253,10 @@ header {
   padding-bottom: 8rem;
 }
 
+body > main > header > div.header-left.aos-init.aos-animate {
+  width: 100%;
+}
+
 .header-left h3 {
   max-width: 410px;
   font-size: 24px;
@@ -272,7 +276,6 @@ header {
 
 .header-left img {
   width: 140px;
-  position: absolute;
   bottom: 0;
 }
 
@@ -280,6 +283,16 @@ header {
   display: flex;
   justify-content: flex-end;
   min-height: 720px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 20px;
+}
+
+.discounted-price {
+  font-weight: bold;
+  color: var(--accent-color);
 }
 
 .hero-container {
@@ -614,9 +627,26 @@ body
   margin-left: 90px;
 }
 
+.cta-buttons {
+  margin-top: 1.5rem;
+}
+
 .cta-right > button:nth-child(4) {
   align-self: flex-start;
   margin-top: 1rem;
+}
+
+#cta > div > div.cta-right > div.cta-buttons > button:nth-child(2) {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  margin-left: 2rem;
+}
+
+#cta > div > div.cta-right > div.cta-buttons > button:nth-child(2):hover {
+  color: white;
+  background-color: var(--accent-color);
+  opacity: 1 !important;
 }
 
 .course-detail-icon {
@@ -663,6 +693,31 @@ body
 
 #course-certificate > h2 {
   font-weight: bold;
+}
+
+#cta > div > div.cta-right > div.cta-buttons > button > a {
+  color: var(--contrast-color);
+}
+
+#cta > div > div.cta-right > div.cta-buttons > button:nth-child(1) > a {
+  color: white;
+}
+
+#cta > div > div.cta-right > a {
+  margin-top: 1rem;
+}
+
+#cta > div > div.cta-right > div.cta-buttons > a:nth-child(2) > button {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  margin-left: 1rem;
+}
+
+#cta > div > div.cta-right > div.cta-buttons > a:nth-child(2) > button:hover {
+  background-color: var(--accent-color);
+  color: white;
+  opacity: 1;
 }
 
 /* Footer */
@@ -786,7 +841,33 @@ footer {
     margin: 0 auto;
   }
 
-  #cta > div > div.cta-right > p {
+  .cta-buttons button {
+    background-color: var(--contrast-color);
+    color: white !important;
+    border: 1px solid var(--contrast-color) !important;
+  }
+
+  #cta > div > div.cta-right > div.cta-buttons > button:nth-child(2) {
+    margin-left: 0;
+    color: var(--contrast-color) !important;
+    border: 1px solid var(--contrast-color);
+  }
+
+  #cta > div > div.cta-right > div.cta-buttons > a:nth-child(2) > button:hover {
+    background-color: var(--contrast-color);
+    color: white !important;
+  }
+
+  #cta > div > div.cta-right > div.cta-buttons > a:nth-child(2) > button {
+    color: var(--contrast-color) !important;
+  }
+
+  #cta > div > div.cta-right > div.cta-buttons > button:nth-child(2):hover {
+    background-color: var(--contrast-color) !important;
+    color: white !important;
+  }
+
+  .cta-buttons #cta > div > div.cta-right > p {
     width: 60%;
     align-self: center;
   }
@@ -906,5 +987,11 @@ footer {
 
   #carouselExampleIndicators {
     border-radius: 0;
+  }
+}
+
+@media (width <= 524px) {
+  body > main > header > div.header-left.aos-init.aos-animate {
+    padding: 2rem;
   }
 }

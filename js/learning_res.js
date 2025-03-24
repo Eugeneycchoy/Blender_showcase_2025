@@ -28,7 +28,7 @@ learnMoreBtn.addEventListener("click", function () {
 });
 
 // Add the scroll event listener
-window.addEventListener("scroll", main);
+window.addEventListener("scroll", executeOnce);
 
 // Select all carousel items
 const carouselItems = document.querySelectorAll(".carousel-item");
@@ -92,7 +92,7 @@ function countUp(target, targetNum, intervalinMs) {
  * the scroll event listener.
  * @return {void}
  */
-function main() {
+function executeOnce() {
   // Check if the current page is index.html
   const path = window.location.pathname;
   if (path.endsWith("/") || path.endsWith("/index.html")) {
@@ -143,4 +143,4 @@ function countAllNums() {
 
 // Function Calls
 countUp(headerNum, 20, 90);
-main();
+executeOnce();
