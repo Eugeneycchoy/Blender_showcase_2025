@@ -988,10 +988,30 @@ footer {
   #carouselExampleIndicators {
     border-radius: 0;
   }
+
+  #IABE-certified > a > img {
+    width: 10rem;
+  }
 }
 
 @media (width <= 524px) {
   body > main > header > div.header-left.aos-init.aos-animate {
     padding: 2rem;
+  }
+
+  #IABE-certified > h2 {
+    min-width: 0;
+  }
+
+  #cta > div > div.cta-right > div.cta-buttons {
+    display: flex;
+  }
+
+  body > main > header > div.header-right.aos-init.aos-animate {
+    height: 125vh;
+  }
+
+  #cta > div > div.cta-right > div.course-detail-container {
+    text-align: left;
   }
 }
