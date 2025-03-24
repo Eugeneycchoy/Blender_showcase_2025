@@ -167,6 +167,10 @@ body {
   background-blend-mode: lighten;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 h1 {
   font-size: var(--desktop-h1-font-size);
 }
@@ -211,8 +215,8 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
 }
 
 button:active {
@@ -523,6 +527,11 @@ body
   background-color: black;
   opacity: 0.5;
   padding: 5rem;
+}
+
+.remove-opacity {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .course-highlights-text-content {
@@ -887,5 +896,15 @@ footer {
 
   .orange-line {
     width: 17rem;
+  }
+
+  #course-highlights {
+    padding: 0;
+    padding-block: 5rem;
+    padding-bottom: 0;
+  }
+
+  #carouselExampleIndicators {
+    border-radius: 0;
   }
 }
