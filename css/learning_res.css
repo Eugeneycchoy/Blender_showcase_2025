@@ -239,8 +239,7 @@ header {
   color: var(--accent-color);
 }
 
-.header-left,
-.header-right {
+.header-left {
   width: 50%;
 }
 
@@ -1013,5 +1012,25 @@ footer {
 
   #cta > div > div.cta-right > div.course-detail-container {
     text-align: left;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  #carouselExampleIndicators
+    > div
+    > div.carousel-item
+    > div.course-highlights-text-content
+    > img {
+    align-self: flex-start;
+  }
+
+  #cta > div > div.cta-right > p {
+    font-size: 15px;
+  }
+
+  #cta > div > div.cta-left {
+    margin-bottom: 0;
   }
 }

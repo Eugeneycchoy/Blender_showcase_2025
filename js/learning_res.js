@@ -7,6 +7,7 @@ let tiltedCard = document.querySelector(".tilted-card");
 let prevScrollPos = window.pageYOffset;
 
 // Event Listeners
+
 window.addEventListener("scroll", function () {
   // current scroll position
   const currentScrollPos = window.pageYOffset;
