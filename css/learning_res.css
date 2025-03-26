@@ -157,7 +157,7 @@ table {
   scroll-snap-align: start;
 }
 
-body {
+.learning_res_body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(../assets/images/bg.png);
   background-attachment: fixed;
@@ -167,45 +167,46 @@ body {
   background-blend-mode: lighten;
 }
 
-a {
+.learning_res_a {
   text-decoration: none !important;
+  color: white;
 }
 
-h1 {
+.learning_res_h1 {
   font-size: var(--desktop-h1-font-size);
 }
 
-h2 {
+.learning_res_h2 {
   font-size: var(--desktop-h2-font-size);
 }
 
-h3 {
+.learning_res_h3 {
   font-size: var(--desktop-h3-font-size);
 }
 
-h4 {
+.learning_res_h4 {
   font-size: var(--desktop-h4-font-size);
 }
 
-p {
+.learning_res_p {
   font-size: var(--desktop-p-font-size);
   color: var(--contrast-color);
 }
 
-nav {
+.learning_res_nav {
   height: 100px;
   width: 100%;
   background-color: transparent;
 }
 
-nav h2 {
+.learning_res_nav h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100%;
 }
 
-button {
+.learning_res_button {
   padding: 15px 30px;
   border-radius: 10px;
   border-style: none;
@@ -214,22 +215,22 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.learning_res_button:hover {
   opacity: 0.7;
   transition: all 0.3s ease-in-out;
 }
 
-button:active {
+.learning_res_button:active {
   outline: none;
 }
 
-button:focus {
+.learning_res_button:focus {
   outline: none;
 }
 
 /* Header Section */
 
-header {
+.learning_res_header {
   display: flex;
   padding: 80px;
   min-height: 80vh;
@@ -252,7 +253,7 @@ header {
   padding-bottom: 8rem;
 }
 
-body > main > header > div.header-left.aos-init.aos-animate {
+.learning_res_body > main > header > div.header-left.aos-init.aos-animate {
   width: 100%;
 }
 
@@ -266,6 +267,16 @@ body > main > header > div.header-left.aos-init.aos-animate {
   font-size: var(--desktop-h1-font-size);
   font-weight: bold;
   line-height: 1.1;
+}
+
+body
+  > main
+  > header
+  > div.header-left.aos-init.aos-animate
+  > div.header-btns
+  > button:nth-child(1):hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .header-btns > button:nth-child(2) {
@@ -307,7 +318,7 @@ body > main > header > div.header-left.aos-init.aos-animate {
   object-fit: cover;
 }
 
-body
+.learning_res_body
   > main
   > header
   > div.header-left.aos-init.aos-animate
@@ -704,6 +715,7 @@ body
 
 #cta > div > div.cta-right > a {
   margin-top: 1rem;
+  color: blue;
 }
 
 #cta > div > div.cta-right > div.cta-buttons > a:nth-child(2) > button {
@@ -720,7 +732,7 @@ body
 }
 
 /* Footer */
-footer {
+.learning_res_footer {
   height: 200px;
   background-color: white;
   display: flex;
@@ -884,7 +896,7 @@ footer {
 
 /* Mobile Screens */
 @media (width <= 955px) {
-  header,
+  .learning_res_header,
   .course-overview-section {
     padding: 23px;
     padding-block: 0;
@@ -892,7 +904,7 @@ footer {
     padding-top: 5rem;
   }
 
-  header {
+  .learning_res_header {
     padding: 0;
     padding-block: 5rem;
     padding-top: 0;
@@ -904,7 +916,7 @@ footer {
     width: 100%;
   }
 
-  body > main > header > div.header-right > div {
+  .learning_res_body > main > .learning_res_header > div.header-right > div {
     border-radius: 0 0 0 0;
   }
 
@@ -929,7 +941,7 @@ footer {
     width: auto;
   }
 
-  body > main > div.course-feature-section > h2 {
+  .learning_res_body > main > div.course-feature-section > h2 {
     font-size: 1.875rem;
   }
 
@@ -951,7 +963,7 @@ footer {
     width: 7.625rem;
   }
 
-  body > main > div.course-feature-section > div > div > h2 {
+  .learning_res_body > main > div.course-feature-section > div > div > h2 {
     margin-top: 0;
   }
 
